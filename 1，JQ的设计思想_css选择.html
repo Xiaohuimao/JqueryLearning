@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #div1 {
+
+    }
+    li {
+
+    }
+  </style>
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script>
+    /*
+      jquery版本区别：
+        1.0 可以兼容到ie8以下
+        2.0 只兼容ie8以上
+      【注】 Jquery中文文档
+
+      jq的设计思想
+        1，模拟css选择网页元素(基本上css选择器都支持)
+        2，独有表达式选择
+    */ 
+    window.onload = function() {
+      // #id
+      // $('#div1').css("backgroundColor","red");
+
+      // .class
+      // $('.box').css("backgroundColor","red");
+
+      // tagName
+      // $("ul li").css("backgroundColor","blue")
+
+      // 
+      $("[name=hello]").css("backgroundColor","yellow")
+    }
+  </script>
+</head>
+<body>
+  <div id="div1">div</div>
+  <input type="text" name="hello">
+  <ul>
+    <li class="box">111</li>
+    <li name="hello">111</li>
+    <li>111</li>
+    <li class="box">111</li>
+  </ul>
+  <ol>
+    <li>2222</li>
+    <li>2222</li>
+    <li>2222</li>
+    <li>2222</li>
+  </ol>
+</body>
+</html>

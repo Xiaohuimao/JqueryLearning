@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script>
+    /* 
+      添加class，会自动过滤重复的class
+      addClass()
+
+      删除class，会自动过滤不存在的class
+      removeClass()
+
+      【注】操作class属性
+    */
+   $(function() {
+    //  $('#div1').addClass("box3 box4 box2");
+
+    $("#div1").removeClass("box2 box3");
+   })
+  </script>
+</head>
+<body>
+  <div id="div1" class="box1 box2"></div>
+</body>
+</html>

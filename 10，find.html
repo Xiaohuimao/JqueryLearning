@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script>
+    /*
+      find 查找子节点
+    */ 
+    $(function() {
+      // $("li").css("backgroundColor","red");
+      // $("ul").find("li").css("backgroundColor","red")
+      // $("ul li").css("backgroundColor","red")
+
+      $("ul").find("[name=hello]").css("backgroundColor","red");
+    })
+  </script>
+</head>
+<body>
+  <ul>
+    <li class="box"></li>
+    <li name="hello"></li>
+    <li class="box"></li>
+  </ul>
+  <ol>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ol>
+</body>
+</html>

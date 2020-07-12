@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script>
+    // window.onload = function() {
+
+    // }
+    // 页面加载完成后执行
+    $(function() {
+      // alert("相当于window.onload");
+      // 原生绑定事件写法
+      // document.getElementsByTagName("h1")[0].onclick = function() {
+      //     console.log(1)
+      //   }
+      /*
+        【注】在jq中基本上见不到等于号，所有的操作都是函数赋值操作
+
+      */ 
+      // 添加一个点击事件
+      $("h1").click(function() {
+        alert("我被点击了")
+      })
+      // 后续所有的事件绑定都是一样的套路
+      $("h1").mouseover(function() {
+        this.style.backgroundColor = "red";
+      })
+      $("h1").mouseout(function() {
+        this.style.backgroundColor = "blue";
+      })
+    })
+  </script>
+</head>
+<body>
+  <h1>hello World</h1>
+  <script>
+    // alert("hello")
+    console.log(document.getElementsByTagName("h1"))
+    
+  </script>
+</body>
+</html>

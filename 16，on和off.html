@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #div1 {
+      width: 100px;
+      height: 100px;
+      background: red;
+    }
+  </style>
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script>
+    /* 
+      $().click(function() {
+
+      })
+
+      on和off方法
+     */
+    //  $(function() {
+    //   //  jq绑定事件是底层是通过添加事件来实现的，所以不会覆盖前一个事件
+    //    $('#div1').click(function() {
+    //      alert(1);
+    //    })
+
+    //    $('#div1').click(function() {
+    //      alert(2);
+    //    })
+    //  })
+
+    // 2,同时给多个事件添加一个函数，多个事件之间可以通过空格隔开
+    // var i = 0;
+    // $(function() {
+    //   $("#div1").on('click mouseover',function() {
+    //     $(this).html(i++);
+    //   })
+    // })
+
+    // 3，给不同的事件添加不同的函数
+    /* $(function () {
+      $('#div1').on({
+        click: function () {
+          alert("点击");
+        },
+        mouseover: function () {
+          $(this).css("backgroundColor", "orange");
+        },
+        mouseout: function () {
+          $(this).css("backgroundColor", "blue");
+        }
+      })
+    }) */
+
+    // 事件委托
+    /* 
+      第二个参数，是触发对象的选择器
+     */
+    /* $(function() {
+      $("ul").on("click", 'li',function() {
+        $(this).css("backgroundColor",'red')
+      })
+
+      var i = 6;
+      $("#btn1").click(function() {
+        // 新增li节点(后添加的节点也是拥有点击事件)
+        $(`<li>${i++ * 1111}</li>`).appendTo($("ul"));
+      })
+    }) */
+
+    $(function() {
+      $()
+    })
+  </script>
+</head>
+
+<body>
+  <div id="div1"></div>
+  <ul>
+    <li>1111</li>
+    <li class="box">2222</li>
+    <li>3333</li>
+    <li class="box">4444</li>
+    <li>5555</li>
+  </ul>
+  <button id="btn1">添加节点</button>
+  <button id="cancel">取消事件</button>
+</body>
+
+</html>

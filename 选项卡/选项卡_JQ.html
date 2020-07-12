@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #div1 button {
+      width: 100px;
+      height: 30px;
+      background-color: gray;
+      font-size: 16px;
+    }
+    #div1 div {
+      width: 350px;
+      height: 350px;
+      background-color: gray;
+      border: 1px solid black;
+      display: none;
+    }
+    #div1 .active {
+      background: orange;
+      color: blue;
+    }
+  </style>
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script>
+    $(function() {
+      var aBtns = $('#div1').find('button');
+      var aDivs = $('#div1').find('div');
+
+      // 给按钮添加点击事件
+      // 不需要遍历？
+      aBtns.click(function() {
+        aBtns.attr("class",'');
+        aDivs.css('display','none');
+
+        $(this).attr('class','active');
+        aDivs.eq($(this).index()).css('display','block');
+      })
+    })
+  </script>
+</head>
+
+<body>
+  <div id="div1">
+    <button class="active">HTML5</button>
+    <button>JavaScript</button>
+    <button>JQuery</button>
+    <div style="display: block;">HTML5是构建Web内容的一种语言描述方式。HTML5是互联网的下一代标准，是构建以及呈现互联网内容的一种语言方式．被认为是互联网的核心技术之一。HTML产生于1990年，1997年HTML4...</div>
+    <div>JS 教程 JS 简介 JavaScript 是属于 HTML 和 Web 的编程语言。 编程令计算机完成您需要它们做的工作。 JavaScript 很容易学习。 本教程涵盖 JavaScript 基础和高级...
+    </div>
+    <div>jQuery 教程 jQuery 是一个 JavaScript 库。 jQuery 极大地简化了 JavaScript 编程。 jQuery 很容易学习。 本章节的每一篇都包含了在线实例 通过本站的在线编辑器...
+    </div>
+  </div>
+</body>
+
+</html>

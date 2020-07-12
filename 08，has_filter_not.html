@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script>
+    /*
+      filter  过滤
+      not filter的反义词（除了）
+      has 拥有，直接判定子节点是否有符合条件的元素(包含)
+    */ 
+    $(function() {
+      // $("div").filter(".box").css("backgroundColor","orange")
+      // $("div").not(".box").css("backgroundColor","orange")
+      $("div").has(".box").css("backgroundColor","orange")
+
+    })
+  </script>
+</head>
+<body>
+  <div class="box">div1</div>
+  <div>
+    div2
+    <strong class="box"></strong>
+  </div>
+</body>
+</html>
